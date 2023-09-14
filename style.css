@@ -33,3 +33,11 @@ html, body {
     text-shadow: 1px 1px 5px var(--secondary-color);
 }
 
+main {
+    background-image: url("images/wallpaper2.jpg");
+    height: calc(100vh - 4rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
