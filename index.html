@@ -7,26 +7,24 @@
         <link href="style.css" rel="stylesheet">
     </head>
     <body>
-        <nav class="navbar">
-            <div class="logo">Name Generator</div>
-        </nav>
         <main>
             <div class="before"></div>
-            <h1>Choose a name</h1>
+            <p class="intro">Welcome to a world of infinite possibilities, where we celebrate diversity and inclusivity. Discover your perfect gender-neutral name and embrace your unique identity with us.</p>
+            <h1 class="header">Choose a name</h1>
             <div class="names">
                  <h3>Press generate to see the name here</h3>
+                 <div class="name-box" id="nameBox">
+                     <h2 class="name" id="name"></h2>
+                 </div>
                  <div class="buttons">
+                     <button class="btn-secondary" id="previous">Previous</button>
                      <button class="btn" id="btn">Generate</button>
-                     <button class="previous" id="previous">Previous</button>
-                     <button class="next" id="next">Next</button>
+                     <button class="btn-secondary" id="next">Next</button>
                  </div>
             </div>
             <div class="after"></div>
 
         </main>
-
-        
-    
         <script src="index.js">
         </script>
     </body>

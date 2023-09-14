@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 :root {
-    --primary-color: #fafafa;
+    --primary-color: #f5f5f5;
     --secondary-color: #000;
     --botton-color: crimson;
 }
@@ -17,16 +17,98 @@ html, body {
     color: var(--secondary-color);
 }
 
-.navbar { 
-    height: 4rem;
-    width: 100vw;
+
+main {
+    height: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
     align-items: center;
-    justify-content: flex-start;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    background: var(--primary-color);
+}
+.before { 
+    height: 4rem;
+    width: 100%;
+    background-image: url(images/wallpaper.jpg);
+}
+
+.intro {
+    height: 6rem;
+    width: 100%;
+    font-size: 1rem;
+    color: #FF8C00;
+    background-color: rgba(255, 255,255,0.7);
+    padding: 1rem;
+}
+
+.header {
+    font-size: 3rem;
+    color: transparent; 
+    -webkit-text-stroke: 1px #000;
+    color: #ffdf01;
+    width: 100%;
+    height: 4rem;
     position: relative;
 }
 
-.navbar::after {
+.header::before {
+    content:"";
+    background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+    height: 0.4rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.names {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+}
+
+.names h3 {
+    font-size: 1.3rem;
+    line-height: 1rem;
+    color: #10c64f;
+}
+
+.name-box {
+    color: #005dbb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+    background-color: rgba(255,255,255,0.7);
+    width: 100%;
+    font-size: 1.5rem;
+    background-image: url(images/wallpaper3.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+}
+
+
+
+.buttons {
+    background-color: rgba(255,255,255,0.7);
+    height: 4rem;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.buttons::after {
     content:"";
     background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
     height: 0.4rem;
@@ -36,26 +118,44 @@ html, body {
     left: 0;
 }
 
-.logo {
-    font-size: 2rem;
-    font-weight: 700;
-    font-family: 'Roboto', sans-serif;
-    text-shadow: 1px 1px 5px #fff;
+.btn-secondary {
+    background-color: #5e409a;
+    color: #fff;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: all 0.20s;
 }
 
-main {
-    height: calc(100vh - 4rem);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background: var(--primary-color);
+.btn-secondary:hover {
+    color: #5e409a;
+    background-color: #f5f5f5;
+    border: 1px solid #5e409a;
 }
 
-main h1 {
-    background-color: rgba(255,255,255,0.8);
-    font-family: 'Roboto', sans-serif;
-    font-size: 3rem;
-    color: transparent; 
-    -webkit-text-stroke: 2px #000;
+.btn {
+    color: #fff;
+    background-color: #fb3e21;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin: 1rem;
+    transition: all 0.20s;
 }
+
+.btn:hover {
+    color: #fb3e21;
+    background-color: #f5f5f5;
+    border: 1px solid #fb3e21;
+}
+
+
+.after {
+    height: 4rem;
+    width: 100%;
+    background-image: 
+    url(images/wallpaper.jpg); 
+}
+
