@@ -1,10 +1,12 @@
 let arr = [];
+let isDataLoaded = false;
 async function getNames() {
     let key = "YAVQjWNSswm0PBJOYQjhVw==oe6cAaYa5XEC32hy"
     const req = await fetch(`https://api.api-ninjas.com/v1/babynames?gender=neutral`, {
         headers: { 'X-Api-Key': key}});
     const res = await req.json();
-    res.map(n => arr.push(n));
+    arr = res;
+    isDataLoaded = true;
 }
 let count = 0;
 const generate = document.getElementById("generate");
@@ -12,19 +14,21 @@ const names = document.getElementById("name");
 const prev = document.getElementById("previous");
 const next = document.getElementById("next");
 const btn = document.getElementById("btn");
-generate.addEventListener("click", () => {
+generate.addEventListener("click", async () => {
     arr = [];
     count = 0;
     names.innerText = "";
-    getNames();
+    isDataLoaded = false;
+    await getNames();
+    isDataLoaded = true;
 });
 
 btn.addEventListener("click", () => {
-    if ( arr[0] == undefined) {
-        alert("Please click on generate first");
+    if ( isDataLoaded === true) {
+        names.innerText = arr[count];
     }
     else {
-    names.innerText = arr[count];
+        alert("please wait for the api call to finish");
     }
     })
     
