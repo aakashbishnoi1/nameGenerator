@@ -1,3 +1,6 @@
+alert(`Click on generate to get 10 names, click on show to get first name
+cycle through the names using previous and next buttons
+click on generate for another 10 names`);
 let arr = [];
 let isDataLoaded = false;
 async function getNames() {
