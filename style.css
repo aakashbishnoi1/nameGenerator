@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 :root {
     --primary-color: #fafafa;
     --secondary-color: #000;
@@ -16,4 +17,19 @@ html, body {
     color: var(--secondary-color);
 }
 
+.navbar { 
+    height: 4rem;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 2px solid var(--botton-color);
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px 5px var(--secondary-color);
+}
 
