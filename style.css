@@ -73,7 +73,7 @@ main {
     align-items:center;
 }
 
-.names h3 {
+.names h3, p {
     font-size: 1.3rem;
     line-height: 1rem;
     color: #10c64f;
